@@ -22,7 +22,7 @@ const routes = [{
     path: '/articles',
     element: <ArticleList />, 
   },{
-    path: '/articles/individual',
+    path: '/articles/:name', // -> /articles/learning-react
     element: <ArticlePage />
   }]
   
