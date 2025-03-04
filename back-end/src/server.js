@@ -1,17 +1,14 @@
 import express from 'express';
 
-
 const app = express();
+const PORT = process.env.PORT || 8000;
 
-app.get('/hello', function(req, res) {    
-    res.send('Hello from a GET endpoint');
-}
-);
+// **NY RUTE FOR `/`**
+app.get('/', (req, res) => {
+    res.send('Backend is running!');
+});
 
-app.post('/hello', function(req, res) {
-    res.send('Hello from a POST endpoint!');
-})
-
-app.listen(8000, function() {
-   console.log('Server is running on port 8000'); 
+// **Bruker PORT-variabelen riktig**
+app.listen(PORT, function () {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
