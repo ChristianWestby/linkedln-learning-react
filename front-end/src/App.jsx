@@ -5,13 +5,14 @@ import { createBrowserRouter,
 import './App.css'
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import ArticleList from './pages/ArticleList';
+import ArticleList from './pages/ArticleListPage';
 import ArticlePage from './pages/ArticlePage';
 import Layout from './Layout';
 
 const routes = [{
    path: '/',
    element: <Layout />,
+   errorElement: <h1>Oh no, you are on a bad path </h1>,
    children: [{
     path: '/',
     element: <HomePage />,
